@@ -1,7 +1,7 @@
 import React from 'react';
 import './TodoSearch.css';
 
-function TodoSearch({ searchValue,setSearchValue }) {
+function TodoSearch({ searchValue,setSearchValue,loading }) {
 
     return (
         <input placeholder="Filtra tus tareas"
@@ -11,6 +11,7 @@ function TodoSearch({ searchValue,setSearchValue }) {
            setSearchValue(event.target.value);
 
         }}
+        disabled={loading}
         />
     );
 }
